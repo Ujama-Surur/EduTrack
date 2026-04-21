@@ -1,5 +1,5 @@
 <?php
-require 'db.php';
+require('config/db.php');
 
 $totalStudents = $pdo->query("SELECT COUNT(*) FROM students")->fetchColumn();
 $activeStudents = $pdo->query("SELECT COUNT(*) FROM students WHERE status = 'active'")->fetchColumn();
